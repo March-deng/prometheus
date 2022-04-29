@@ -1,30 +1,25 @@
 # Prometheus
 
-[![CircleCI](https://circleci.com/gh/prometheus/prometheus/tree/main.svg?style=shield)][circleci]
-[![Docker Repository on Quay](https://quay.io/repository/prometheus/prometheus/status)][quay]
-[![Docker Pulls](https://img.shields.io/docker/pulls/prom/prometheus.svg?maxAge=604800)][hub]
-[![Go Report Card](https://goreportcard.com/badge/github.com/prometheus/prometheus)](https://goreportcard.com/report/github.com/prometheus/prometheus)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/486/badge)](https://bestpractices.coreinfrastructure.org/projects/486)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/prometheus/prometheus)
-[![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/prometheus.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:prometheus)
 
-Visit [prometheus.io](https://prometheus.io) for the full documentation,
-examples and guides.
+关于Prometheus的详细文档，访问[prometheus.io](https://prometheus.io)。
 
-Prometheus, a [Cloud Native Computing Foundation](https://cncf.io/) project, is a systems and service monitoring system. It collects metrics
-from configured targets at given intervals, evaluates rule expressions,
-displays the results, and can trigger alerts when specified conditions are observed.
+Prometheus，作为一个CNCF的毕业项目，是一个系统和服务监控系统。它以给定的间隔从配置好的目标上收集指标，对规则表达式进行求值并展示其结果，而且在给定条件满足时出发告警。
 
-The features that distinguish Prometheus from other metrics and monitoring systems are:
 
-- A **multi-dimensional** data model (time series defined by metric name and set of key/value dimensions)
+让Prometheus有别于其他指标和监控系统的功能室：
+
+
+
+- 一个多维度的数据模型，时序数据由指标名称和一组标签所定义
 - PromQL, a **powerful and flexible query language** to leverage this dimensionality
-- No dependency on distributed storage; **single server nodes are autonomous**
-- An HTTP **pull model** for time series collection
-- **Pushing time series** is supported via an intermediary gateway for batch jobs
-- Targets are discovered via **service discovery** or **static configuration**
-- Multiple modes of **graphing and dashboarding support**
-- Support for hierarchical and horizontal **federation**
+- PromQL，一个强大而又灵活的查询语言，以提升这多多维度的表达力。
+- 不依赖于分布式存储。一个服务器节点就是自洽的。
+- 时序数据收集基于HTTP 拉数据的方式
+- 对于批量任务来说，通过一个中间网关推送指标数据也是支持的。
+- 监控目标可动态发现也可静态配置。
+- 多种图形化和大盘化展示的支持
+- 支持层级式或水平式的联邦集群。
+
 
 ## Architecture overview
 
